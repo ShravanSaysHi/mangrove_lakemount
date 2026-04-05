@@ -1,0 +1,515 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mangrove Lakemount Kayak - Explore mangrove waterways and pristine lakes with guided kayak tours and rentals in Mangrove Bay, FL." />
+  <title>Mangrove Lakemount Kayak</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ==============================
+       NAVBAR
+  ============================== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <img src="images/logoNew.jpg" alt="Mangrove Lakemount Kayak Logo" id="nav-logo-img" />
+        <span class="nav-brand">Mangrove Lakemount <strong>Kayak</strong></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#reviews" class="nav-link" data-section="reviews">Reviews</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta-btn">Book Now</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+
+  <!-- ==============================
+       HERO SECTION
+  ============================== -->
+  <section id="home" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-logo-wrap" data-aos="zoom-in" data-aos-duration="900">
+        <img src="images/logoNew.jpg" alt="Mangrove Lakemount Kayak" class="hero-logo" />
+      </div>
+      <div class="hero-text" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <p class="hero-eyebrow">Welcome to</p>
+        <h1 class="hero-title">Mangrove<br /><span>Lakemount</span> Kayak</h1>
+        <p class="hero-tagline">Paddle through ancient mangroves and pristine lakescapes.<br />Guided tours, rentals &
+          unforgettable adventures await.</p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">Explore Tours</a>
+          <a href="#about" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="#f0f7f4" />
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       STATS BAR
+  ============================== -->
+  <section class="stats-bar" data-aos="fade-up" data-aos-duration="700">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-count="200">0</span><span class="stat-suffix">+</span>
+          <p class="stat-label">Happy Paddlers</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+          <p class="stat-label">Curated Routes</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+          <p class="stat-label">Eco-Friendly</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="98">0</span><span class="stat-suffix">%</span>
+          <p class="stat-label">Satisfaction Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       ABOUT SECTION
+  ============================== -->
+  <section id="about" class="about section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Our Story</span>
+        <h2 class="section-title">Rooted in Nature,<br />Driven by Adventure</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-img-col" data-aos="fade-right" data-aos-duration="800">
+          <div class="about-img-wrap">
+            <img src="images/logoNew.jpg" alt="Mangrove Lakemount Kayak" class="about-logo-display" />
+          </div>
+          <div class="about-features">
+            <div class="about-feature">
+              <i data-lucide="shield-check"></i>
+              <span>Safety Certified</span>
+            </div>
+            <div class="about-feature">
+              <i data-lucide="leaf"></i>
+              <span>Eco-Friendly</span>
+            </div>
+            <div class="about-feature">
+              <i data-lucide="users"></i>
+              <span>Family Friendly</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-col" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+          <h3>A Passion for the Waterways</h3>
+          <p>Founded by lifelong paddlers, Mangrove Lakemount Kayak was born out of a deep love for the untouched beauty
+            of Florida's mangrove ecosystems and freshwater lakes. We believe everyone deserves to experience the
+            serenity of gliding through still water, surrounded by towering cypress and ancient mangrove roots.</p>
+          <p>Our certified guides bring expertise, enthusiasm, and a genuine care for your safety. Whether you're a
+            first-time paddler or an experienced kayaker, we tailor every experience to match your pace and comfort
+            level.</p>
+          <ul class="about-list">
+            <li><i data-lucide="check-circle"></i> Certified & experienced local guides</li>
+            <li><i data-lucide="check-circle"></i> Top-quality kayaks & safety gear provided</li>
+            <li><i data-lucide="check-circle"></i> Small group sizes for a personal experience</li>
+            <li><i data-lucide="check-circle"></i> Leave-no-trace environmental philosophy</li>
+          </ul>
+          <a href="#services" class="btn btn-primary">View Our Tours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       SERVICES SECTION
+  ============================== -->
+  <section id="services" class="services section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">What We Offer</span>
+        <h2 class="section-title">Tours & Experiences</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">From tranquil sunrise paddles to thrilling mangrove expeditions, we have an
+          adventure for every level.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap">
+            <i data-lucide="sunrise"></i>
+          </div>
+          <h3>Sunrise Paddle Tour</h3>
+          <p>Start your day on the water as golden light filters through the mangroves. A peaceful 2-hour guided morning
+            paddle through serene canals.</p>
+          <ul class="service-details">
+            <li><i data-lucide="clock"></i> 2 Hours</li>
+            <li><i data-lucide="users"></i> Max 30 Guests</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-green service-btn">Book This Tour</a>
+        </div>
+
+        <div class="service-card featured-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-icon-wrap">
+            <i data-lucide="map"></i>
+          </div>
+          <h3>Mangrove Expedition</h3>
+          <p>Paddle deep into the heart of the mangrove tunnels on our signature 4-hour guided journey. Spot wildlife,
+            learn ecology, and find inner peace.</p>
+          <ul class="service-details">
+            <li><i data-lucide="clock"></i> 4 Hours</li>
+            <li><i data-lucide="users"></i> Max 30 Guests</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary service-btn">Book This Tour</a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon-wrap">
+            <i data-lucide="moon"></i>
+          </div>
+          <h3>Sunset Paddle</h3>
+          <p>Witness nature's magic as the sun sets over the water. An unforgettable evening adventure.</p>
+          <ul class="service-details">
+            <li><i data-lucide="clock"></i> 3 Hours</li>
+            <li><i data-lucide="users"></i> Max 30 Guests</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-green service-btn">Book This Tour</a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap">
+            <i data-lucide="tent"></i>
+          </div>
+          <h3>Traditional Country Boat Ride</h3>
+          <p>Experience a serene ride on a traditional country boat through calm backwaters and mangrove-lined routes.
+            Ideal for families, seniors, and anyone who prefers a relaxed pace.</p>
+          <ul class="service-details">
+            <li><i data-lucide="clock"></i> 2.5 Hours</li>
+            <li><i data-lucide="users"></i> Max 30 Guests</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-green service-btn">Book This Tour</a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon-wrap">
+            <i data-lucide="graduation-cap"></i>
+          </div>
+          <h3>Beginner's Kayak Lesson</h3>
+          <p>New to kayaking? Our 1-hour intro lesson covers everything you need - paddle technique, safety, and water
+            confidence.</p>
+          <ul class="service-details">
+            <li><i data-lucide="clock"></i> 1 Hour</li>
+            <li><i data-lucide="users"></i> Max 30 Guests</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-green service-btn">Book This Tour</a>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon-wrap">
+            <i data-lucide="package"></i>
+          </div>
+          <h3>Kayak Rental</h3>
+          <p>Experienced paddler? Rent one of our premium single or tandem kayaks by the hour and explore at your own
+            pace.</p>
+          <ul class="service-details">
+            <li><i data-lucide="clock"></i> Hourly</li>
+            <li><i data-lucide="users"></i> Max 30 Guests</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline-green service-btn">Rent Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       WHY CHOOSE US
+  ============================== -->
+  <section class="why-us section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Why Us</span>
+        <h2 class="section-title">The Mangrove Lakemount Difference</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-icon"><i data-lucide="shield"></i></div>
+          <h4>Safety First</h4>
+          <p>All equipment is inspected daily. Every guide holds water rescue certifications and first aid training.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-icon"><i data-lucide="leaf"></i></div>
+          <h4>Environmental Stewardship</h4>
+          <p>We follow strict leave-no-trace principles and actively participate in local mangrove conservation efforts.
+          </p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="why-icon"><i data-lucide="star"></i></div>
+          <h4>5-Star Experience</h4>
+          <p>Consistently rated 5 stars by our guests. We go above and beyond to make every paddle memorable.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="why-icon"><i data-lucide="camera"></i></div>
+          <h4>Memory Makers</h4>
+          <p>Our guides double as photographers - you'll leave with stunning shots to remember your experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       GALLERY
+  ============================== -->
+  <section class="gallery section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Visuals</span>
+        <h2 class="section-title">A Glimpse of the Journey</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="gallery-grid">
+        <img src="images/40a717a41296cdbeb7d6493c51cb3048.jpg" alt="Gallery Image 1" class="gallery-image"
+          data-aos="fade-up" data-aos-delay="0" />
+        <img src="images/88fe085cf7b4d5eb555cb8793e45fbd1.jpg" alt="Gallery Image 2" class="gallery-image"
+          data-aos="fade-up" data-aos-delay="100" />
+        <img src="images/c06bed06859d0a8c18d1fe27d02f2673.jpg" alt="Gallery Image 3" class="gallery-image"
+          data-aos="fade-up" data-aos-delay="200" />
+        <img src="images/eb87298d98a2383cebc7629ce8135cca.jpg" alt="Gallery Image 4" class="gallery-image"
+          data-aos="fade-up" data-aos-delay="300" />
+        <img src="images/f32429972f96a8fd355c4cc4cc0de2b5.jpg" alt="Gallery Image 5" class="gallery-image"
+          data-aos="fade-up" data-aos-delay="400" />
+        <img src="images/0226d942ed7fb640f5436fd358e3f2c7 (2).jpg" alt="Gallery Image 6" class="gallery-image"
+          data-aos="fade-up" data-aos-delay="500" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       REVIEWS
+  ============================== -->
+  <section id="reviews" class="reviews section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Customer Voices</span>
+        <h2 class="section-title">What Paddlers Say</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Real feedback from guests who explored the mangroves and lakes with us.</p>
+      </div>
+
+      <div class="reviews-stats" data-aos="fade-up" data-aos-delay="80">
+        <div class="reviews-stat-item">
+          <span class="reviews-stat-value" id="reviews-average">0.0</span>
+          <span class="reviews-stat-label">Average Rating</span>
+        </div>
+        <div class="reviews-stat-item">
+          <span class="reviews-stat-value" id="reviews-count">0</span>
+          <span class="reviews-stat-label">Guest Reviews</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid" id="reviews-grid"></div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       CONTACT SECTION
+  ============================== -->
+  <section id="contact" class="contact section-pad">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-title">Book Your Adventure</h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">Ready to paddle? Reach out to us - we'd love to help you plan the perfect
+          experience.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info (loaded dynamically) -->
+        <div class="contact-info-col" data-aos="fade-right" data-aos-duration="800">
+          <h3>Contact Details</h3>
+          <div class="contact-details" id="contact-details">
+            <div class="contact-loading">
+              <div class="loading-spinner"></div>
+              <span>Loading contact info...</span>
+            </div>
+          </div>
+          <div class="contact-social is-hidden" id="contact-social">
+            <h4>Follow Our Adventures</h4>
+            <div class="social-links" id="social-links"></div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-col" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Full Name</label>
+                <input type="text" id="form-name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" name="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-service">Interested In</label>
+              <select id="form-service" name="service">
+                <option value="">Select a tour or service...</option>
+                <option>Sunrise Paddle Tour</option>
+                <option>Mangrove Expedition</option>
+                <option>Sunset Paddle</option>
+                <option>Traditional Country Boat Ride</option>
+                <option>Beginner's Kayak Lesson</option>
+                <option>Kayak Rental</option>
+                <option>Private / Custom Tour</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="form-date">Preferred Date</label>
+              <input type="date" id="form-date" name="date" />
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="4"
+                placeholder="Tell us about your group size, experience level, or any questions..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+              <i data-lucide="send"></i> Send Message
+            </button>
+            <div class="form-success is-hidden" id="form-success">
+              <i data-lucide="check-circle"></i>
+              <span>Thanks! We'll be in touch within 24 hours.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,30 C400,60 1040,0 1440,30 L1440,60 L0,60 Z" fill="#0d2137" />
+      </svg>
+    </div>
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logoNew.jpg" alt="Mangrove Lakemount Kayak" class="footer-logo" />
+            <p>Where nature meets adventure. Paddle through paradise with Florida's premier kayak tour company.</p>
+            <div class="footer-social" id="footer-social"></div>
+          </div>
+
+          <div class="footer-col">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Tours & Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Our Services</h5>
+            <ul>
+              <li><a href="#services">Sunrise Paddle</a></li>
+              <li><a href="#services">Mangrove Expedition</a></li>
+              <li><a href="#services">Sunset Paddle</a></li>
+              <li><a href="#services">Country Boat Ride</a></li>
+              <li><a href="#services">Kayak Rentals</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Contact Info</h5>
+            <ul class="footer-contact-list" id="footer-contact-list">
+              <li><i data-lucide="loader"></i> Loading...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Mangrove Lakemount Kayak. All rights reserved.</p>
+        <p>Crafted with <span class="text-green">&hearts;</span> for nature lovers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
