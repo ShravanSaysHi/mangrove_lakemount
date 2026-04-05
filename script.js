@@ -169,35 +169,35 @@ function initReviews() {
       name: 'Aarav Nair',
       tour: 'Mangrove Expedition',
       rating: 5,
-      date: 'February 2026',
+      date: 'March 2026',
       text: 'The guide explained the ecosystem really well and kept the pace perfect for beginners. We saw birds, crabs, and even a ray near the shallow area.'
     },
     {
-      name: 'Priya Deshmukh',
+      name: 'Priya Unni',
       tour: 'Sunrise Paddle Tour',
       rating: 5,
-      date: 'January 2026',
+      date: 'March 2026',
       text: 'Very peaceful and organized. Safety briefing was clear, gear was clean, and the sunrise view over the water was honestly worth waking up early for.'
     },
     {
-      name: 'Rohan Kulkarni',
+      name: 'Rohan',
       tour: 'Kayak Rental',
       rating: 4,
       date: 'March 2026',
       text: 'Rental handover was quick and staff helped us choose a suitable route based on tide and wind. Good value, and the kayaks were in solid condition.'
     },
     {
-      name: 'Sneha Iyer',
+      name: 'Sneha Arun',
       tour: 'Sunset Paddle',
       rating: 5,
-      date: 'December 2025',
+      date: 'March 2026',
       text: 'Loved the evening atmosphere and calm water. Our guide took some great photos for us and gave helpful paddling tips throughout the trip.'
     },
     {
-      name: 'Karthik Reddy',
+      name: 'Karthik R',
       tour: 'Traditional Country Boat Ride',
       rating: 5,
-      date: 'February 2026',
+      date: 'March 2026',
       text: 'Very calm and scenic ride with great local storytelling from the boatman. It was a comfortable option for our parents while we still enjoyed the mangrove views.'
     },
     {
