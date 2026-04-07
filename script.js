@@ -1,4 +1,4 @@
-﻿/* =============================================
+/* =============================================
    MANGROVE LAKEMOUNT KAYAK - script.js
 ============================================= */
 
@@ -169,35 +169,35 @@ function initReviews() {
       name: 'Aarav Nair',
       tour: 'Mangrove Expedition',
       rating: 5,
-      date: 'March 2026',
+      date: 'February 2026',
       text: 'The guide explained the ecosystem really well and kept the pace perfect for beginners. We saw birds, crabs, and even a ray near the shallow area.'
     },
     {
-      name: 'Priya Unni',
+      name: 'Priya Deshmukh',
       tour: 'Sunrise Paddle Tour',
       rating: 5,
-      date: 'March 2026',
+      date: 'January 2026',
       text: 'Very peaceful and organized. Safety briefing was clear, gear was clean, and the sunrise view over the water was honestly worth waking up early for.'
     },
     {
-      name: 'Rohan',
+      name: 'Rohan Kulkarni',
       tour: 'Kayak Rental',
       rating: 4,
       date: 'March 2026',
       text: 'Rental handover was quick and staff helped us choose a suitable route based on tide and wind. Good value, and the kayaks were in solid condition.'
     },
     {
-      name: 'Sneha Arun',
+      name: 'Sneha Iyer',
       tour: 'Sunset Paddle',
       rating: 5,
-      date: 'March 2026',
+      date: 'December 2025',
       text: 'Loved the evening atmosphere and calm water. Our guide took some great photos for us and gave helpful paddling tips throughout the trip.'
     },
     {
-      name: 'Karthik R',
+      name: 'Karthik Reddy',
       tour: 'Traditional Country Boat Ride',
       rating: 5,
-      date: 'March 2026',
+      date: 'February 2026',
       text: 'Very calm and scenic ride with great local storytelling from the boatman. It was a comfortable option for our parents while we still enjoyed the mangrove views.'
     },
     {
@@ -429,17 +429,31 @@ function initContactForm() {
       return;
     }
 
-    // Simulate sending (replace with real API/fetch as needed)
-    submit.disabled = true;
-    submit.innerHTML = '<i data-lucide="loader"></i> Sending...';
-    lucide.createIcons();
+    const service = form['service'].value.trim();
+    const date = form['date'].value.trim();
+    const message = form['message'].value.trim();
 
-    setTimeout(() => {
-      form.reset();
-      submit.style.display = 'none';
-      if (success) success.classList.remove('is-hidden');
-      lucide.createIcons();
-    }, 1500);
+    // Construct WhatsApp message
+    let waText = `Hi, I'm ${name} (${email}).`;
+    if (service) waText += `\nI am interested in: ${service}.`;
+    if (date) waText += `\nPreferred date: ${date}.`;
+    if (message) waText += `\n\nMessage:\n${message}`;
+
+    const waUrl = buildWhatsAppUrl(waText);
+    if (waUrl) {
+      const popup = window.open(waUrl, '_blank', 'noopener,noreferrer');
+      if (!popup) {
+        window.location.href = waUrl;
+      }
+    } else {
+      alert("WhatsApp contact number is not available at the moment.");
+      return;
+    }
+
+    // Show success message to user
+    submit.style.display = 'none';
+    if (success) success.classList.remove('is-hidden');
+    form.reset();
   });
 }
 
@@ -497,11 +511,13 @@ function updateWhatsAppLinks(data) {
   const cleanPhone = extractPrimaryPhone(whatsappNumber).replace(/[^\d]/g, '');
   if (!cleanPhone) return;
 
-  const defaultMessage = encodeURIComponent("Hi, I would like to book a tour with Mangrove Lakemount Kayak!");
+  window.__whatsappNumber = cleanPhone;
+
+  const defaultMessage = "Hi, I would like to book a tour with Mangrove Lakemount Kayak!";
   
   const navCtaBtn = document.querySelector('.nav-cta-btn');
   if (navCtaBtn) {
-    navCtaBtn.href = `https://wa.me/${cleanPhone}?text=${defaultMessage}`;
+    navCtaBtn.href = buildWhatsAppUrl(defaultMessage);
     navCtaBtn.target = '_blank';
     navCtaBtn.rel = 'noopener noreferrer';
   }
@@ -513,10 +529,10 @@ function updateWhatsAppLinks(data) {
     if (card) {
       const title = card.querySelector('h3');
       if (title && title.textContent) {
-        message = encodeURIComponent(`Hi, I would like to book the "${title.textContent}" with Mangrove Lakemount Kayak!`);
+        message = `Hi, I would like to book the "${title.textContent}" with Mangrove Lakemount Kayak!`;
       }
     }
-    btn.href = `https://wa.me/${cleanPhone}?text=${message}`;
+    btn.href = buildWhatsAppUrl(message);
     btn.target = '_blank';
     btn.rel = 'noopener noreferrer';
   });
@@ -528,6 +544,23 @@ function updateWhatsAppLinks(data) {
 // ============================================================
 function buildStars(rating) {
   return '&#9733;'.repeat(rating) + '&#9734;'.repeat(5 - rating);
+}
+
+function resolveWhatsAppNumber() {
+  if (window.__whatsappNumber) return window.__whatsappNumber;
+  const navHref = document.querySelector('.nav-cta-btn')?.getAttribute('href') || '';
+  const match = navHref.match(/wa\.me\/(\d+)/i);
+  if (match && match[1]) {
+    window.__whatsappNumber = match[1];
+    return match[1];
+  }
+  return '';
+}
+
+function buildWhatsAppUrl(messageText) {
+  const number = resolveWhatsAppNumber();
+  if (!number) return '';
+  return `https://wa.me/${number}?text=${encodeURIComponent(messageText || '')}`;
 }
 
 function extractPrimaryPhone(phoneValue) {
