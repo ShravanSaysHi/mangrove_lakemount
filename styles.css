@@ -290,94 +290,6 @@ ul { list-style: none; }
 }
 
 /* =============================================
-   GRAND OPENING POPUP
-============================================= */
-.grand-opening-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(8, 20, 34, 0.72);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition);
-  z-index: 1200;
-}
-
-.grand-opening-modal.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.grand-opening-card {
-  position: relative;
-  width: min(560px, 100%);
-  background: linear-gradient(155deg, #ffffff 0%, #edf8f1 100%);
-  border-radius: 22px;
-  border: 1px solid rgba(46, 125, 70, 0.25);
-  box-shadow: 0 24px 70px rgba(13, 33, 55, 0.28);
-  padding: 36px 32px 30px;
-  text-align: center;
-  animation: popupEnter 0.45s ease-out;
-}
-
-.grand-opening-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 36px;
-  height: 36px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(13, 33, 55, 0.08);
-  color: var(--navy);
-  font-size: 1.55rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.grand-opening-close:hover {
-  background: rgba(13, 33, 55, 0.15);
-  transform: scale(1.06);
-}
-
-.grand-opening-eyebrow {
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--green);
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.grand-opening-card h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  line-height: 1.2;
-  color: var(--navy);
-  margin-bottom: 14px;
-}
-
-.grand-opening-text {
-  color: var(--text-mid);
-  font-size: 1rem;
-  margin-bottom: 24px;
-}
-
-.grand-opening-cta {
-  width: 100%;
-  justify-content: center;
-}
-
-@keyframes popupEnter {
-  from { opacity: 0; transform: translateY(24px) scale(0.96); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-/* =============================================
    HERO
 ============================================= */
 .hero {
@@ -1369,6 +1281,4 @@ ul { list-style: none; }
   .why-grid { grid-template-columns: 1fr; }
 
   .footer-bottom .container { justify-content: center; text-align: center; }
-  .grand-opening-card { padding: 30px 20px 24px; }
-  .grand-opening-close { top: 10px; right: 10px; }
 }

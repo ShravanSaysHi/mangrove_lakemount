@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSectionHighlight();
   initCounterAnimation();
-  initGrandOpeningPopup();
   initReviews();
   loadContactDetails();
   initContactForm();
@@ -161,94 +160,50 @@ function initCounterAnimation() {
 }
 
 // ============================================================
-// 6. GRAND OPENING POPUP
-// ============================================================
-function initGrandOpeningPopup() {
-  const modal = document.getElementById('grand-opening-modal');
-  const closeBtn = document.getElementById('grand-opening-close');
-  const ctaBtn = document.getElementById('grand-opening-cta');
-  if (!modal || !closeBtn) return;
-
-  const sessionKey = 'grandOpeningPopupClosed';
-
-  const closePopup = () => {
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    sessionStorage.setItem(sessionKey, 'true');
-  };
-
-  const openPopup = () => {
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  };
-
-  const alreadyClosed = sessionStorage.getItem(sessionKey) === 'true';
-  if (!alreadyClosed) {
-    setTimeout(openPopup, 900);
-  }
-
-  closeBtn.addEventListener('click', closePopup);
-  modal.addEventListener('click', event => {
-    if (event.target === modal) closePopup();
-  });
-  if (ctaBtn) {
-    ctaBtn.addEventListener('click', closePopup);
-  }
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && modal.classList.contains('open')) {
-      closePopup();
-    }
-  });
-}
-
-
-// ============================================================
-// 7. CUSTOMER REVIEWS
+// 6. CUSTOMER REVIEWS
 // ============================================================
 function initReviews() {
   const reviews = [
     {
-      name: 'Aarav Nair',
+      name: 'Akhil P.',
       tour: 'Mangrove Expedition',
       rating: 5,
-      date: 'February 2026',
+      date: 'April 2026',
       text: 'The guide explained the ecosystem really well and kept the pace perfect for beginners. We saw birds, crabs, and even a ray near the shallow area.'
     },
     {
-      name: 'Priya Deshmukh',
+      name: 'Anju R.',
       tour: 'Sunrise Paddle Tour',
       rating: 5,
-      date: 'January 2026',
+      date: 'April 2026',
       text: 'Very peaceful and organized. Safety briefing was clear, gear was clean, and the sunrise view over the water was honestly worth waking up early for.'
     },
     {
-      name: 'Rohan Kulkarni',
+      name: 'Nithin K.',
       tour: 'Kayak Rental',
       rating: 4,
-      date: 'March 2026',
+      date: 'April 2026',
       text: 'Rental handover was quick and staff helped us choose a suitable route based on tide and wind. Good value, and the kayaks were in solid condition.'
     },
     {
-      name: 'Sneha Iyer',
+      name: 'Meera S.',
       tour: 'Sunset Paddle',
       rating: 5,
-      date: 'December 2025',
+      date: 'April 2026',
       text: 'Loved the evening atmosphere and calm water. Our guide took some great photos for us and gave helpful paddling tips throughout the trip.'
     },
     {
-      name: 'Karthik Reddy',
+      name: 'Sreejith M.',
       tour: 'Traditional Country Boat Ride',
       rating: 5,
-      date: 'February 2026',
+      date: 'April 2026',
       text: 'Very calm and scenic ride with great local storytelling from the boatman. It was a comfortable option for our parents while we still enjoyed the mangrove views.'
     },
     {
-      name: 'Meera Joshi',
+      name: 'Diya N.',
       tour: "Beginner's Kayak Lesson",
       rating: 4,
-      date: 'March 2026',
+      date: 'April 2026',
       text: 'I was nervous before starting, but the instructors were patient and practical. By the end I was confidently turning and paddling on my own.'
     }
   ];
@@ -279,7 +234,7 @@ function initReviews() {
 }
 
 // ============================================================
-// 8. LOAD CONTACT DETAILS from contact.txt
+// 7. LOAD CONTACT DETAILS from contact.txt
 // ============================================================
 function loadContactDetails() {
   fetch('contact.txt')
@@ -454,7 +409,7 @@ function renderFooterContact(data) {
 
 
 // ============================================================
-// 9. CONTACT FORM - basic client-side handling
+// 8. CONTACT FORM - basic client-side handling
 // ============================================================
 function initContactForm() {
   const form    = document.getElementById('contact-form');
@@ -520,7 +475,7 @@ function shakeField(el) {
 
 
 // ============================================================
-// 10. FOOTER YEAR
+// 9. FOOTER YEAR
 // ============================================================
 function setFooterYear() {
   const el = document.getElementById('year');
@@ -529,7 +484,7 @@ function setFooterYear() {
 
 
 // ============================================================
-// 11. SMOOTH SCROLL POLYFILL (for older browsers)
+// 10. SMOOTH SCROLL POLYFILL (for older browsers)
 // ============================================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
