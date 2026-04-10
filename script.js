@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initSectionHighlight();
   initCounterAnimation();
+  initGrandOpeningPopup();
   initReviews();
   loadContactDetails();
   initContactForm();
@@ -159,9 +160,52 @@ function initCounterAnimation() {
   observer.observe(statsBar);
 }
 
+// ============================================================
+// 6. GRAND OPENING POPUP
+// ============================================================
+function initGrandOpeningPopup() {
+  const modal = document.getElementById('grand-opening-modal');
+  const closeBtn = document.getElementById('grand-opening-close');
+  const ctaBtn = document.getElementById('grand-opening-cta');
+  if (!modal || !closeBtn) return;
+
+  const sessionKey = 'grandOpeningPopupClosed';
+
+  const closePopup = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    sessionStorage.setItem(sessionKey, 'true');
+  };
+
+  const openPopup = () => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const alreadyClosed = sessionStorage.getItem(sessionKey) === 'true';
+  if (!alreadyClosed) {
+    setTimeout(openPopup, 900);
+  }
+
+  closeBtn.addEventListener('click', closePopup);
+  modal.addEventListener('click', event => {
+    if (event.target === modal) closePopup();
+  });
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', closePopup);
+  }
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal.classList.contains('open')) {
+      closePopup();
+    }
+  });
+}
+
 
 // ============================================================
-// 6. CUSTOMER REVIEWS
+// 7. CUSTOMER REVIEWS
 // ============================================================
 function initReviews() {
   const reviews = [
@@ -235,7 +279,7 @@ function initReviews() {
 }
 
 // ============================================================
-// 7. LOAD CONTACT DETAILS from contact.txt
+// 8. LOAD CONTACT DETAILS from contact.txt
 // ============================================================
 function loadContactDetails() {
   fetch('contact.txt')
@@ -410,7 +454,7 @@ function renderFooterContact(data) {
 
 
 // ============================================================
-// 8. CONTACT FORM - basic client-side handling
+// 9. CONTACT FORM - basic client-side handling
 // ============================================================
 function initContactForm() {
   const form    = document.getElementById('contact-form');
@@ -476,7 +520,7 @@ function shakeField(el) {
 
 
 // ============================================================
-// 9. FOOTER YEAR
+// 10. FOOTER YEAR
 // ============================================================
 function setFooterYear() {
   const el = document.getElementById('year');
@@ -485,7 +529,7 @@ function setFooterYear() {
 
 
 // ============================================================
-// 10. SMOOTH SCROLL POLYFILL (for older browsers)
+// 11. SMOOTH SCROLL POLYFILL (for older browsers)
 // ============================================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
